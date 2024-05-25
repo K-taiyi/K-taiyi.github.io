@@ -1,0 +1,172 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    line-height: 20px;
+    box-sizing: border-box;
+}
+.Header{
+    width: 100%;
+    height: 70px;
+    display: flex;
+}
+.Head-title{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(9, 11, 161);
+}
+.Menu{
+    width: 75%;
+    display: flex;
+    align-items: center;
+    justify-content:end;
+}
+.Drop-menu{
+    display: flex; 
+    justify-content: center;
+    gap: 1.5rem;
+}
+.Link{
+    color: #00fff2;  
+}
+/*  */
+.Swip{
+    width: 100%;
+    height: 350px;
+    background-color: rgb(17, 244, 221);
+}
+.Swip-pic{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Swip-pic img{
+    height: 70%;
+}
+.Swip-title{
+    width: 100%;
+    text-align: center;
+    height: 30%;
+    line-height: 35px;
+    color: white; 
+}
+.Swip-title p{
+    font-size: 20px;
+}
+.Swip-title h2{
+    word-spacing: 2px;  
+}
+/*  */
+.Container{
+    width: 100%;
+    display: flex;
+    margin-top: 15px;
+    gap: 1rem;
+    padding: 25px 35px;
+}
+.Con-left{
+    width: calc(100%/3);
+    height: 100%;
+}
+.Con-mid{
+    width: calc(100%/3);
+    height: 100%;
+}
+.Con-mid img{
+    width: 95%;
+    margin: 10px 0px;
+}
+.Con-right{
+    width: calc(100%/3);
+    height: 100%;
+}
+.Container p{
+    display: flex;
+    text-align: left;
+}
+.Container h3{
+    color: blue;
+}
+/*  */
+.Footer{
+    width: 100%;
+    height: 80px;
+    margin-bottom: 3px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:rgba(140, 204, 245, 0.729) ;
+}
+@media screen and (min-width: 631px) and (max-width: 768px) {
+    .Container{
+        display:block;
+    }
+    .Con-left{
+        float: left;
+        width: 49%;
+    }
+    .Con-mid{
+        float: right;
+        width: 49%;
+        margin: 0;
+    }
+    .Con-right{
+        float: left;
+        width: 100%;
+        margin: 20px 0px;
+        line-height: 10px;
+    }
+}
+@media screen and (min-width:344px) and (max-width:630px){
+    .Header{
+        height: 120px;
+        flex-direction: column;
+    }
+    .Head-title{
+        width: 100%;
+        margin-top: 20px;
+        height: 50%;
+        font-size: 20px;
+    }
+    .Menu{
+        display: flex;
+        height: 50%;
+        justify-content: center;
+        width: 100%;
+        font-size: 14px;
+    }
+    .Drop-menu{
+        gap: 1rem;
+    }
+    .Container{
+        flex-direction: column;
+    }
+    .Container h3{
+        font-size: 22px;
+        margin: 10px 0px;
+    }
+    .Con-left{
+        width: 100%;
+    }
+    .Con-mid{
+        width: 100%;
+    }
+    .Con-right{
+        width: 100%;
+    }
+    .Swip-title{
+        font-size: 20px;
+    }
+    .Swip-title h2{
+        margin-bottom: 20px;
+    }
+    .Footer{
+        margin-top: 20px;
+    }
+}

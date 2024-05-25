@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body{
+    background-color: rgb(216, 213, 213);
+}
+.Right-side{
+    width: 81.4%;
+    height: 90vh;
+    position: fixed;
+    top: 0;
+    right: 15px;
+}
+.R-top-side{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+.R-top-left{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.Dropdown{
+    display: flex;
+}
+.Link{
+    font-size: 14px;
+    color: gray;
+}
+.Link i{
+    margin: 0px 10px;
+}
+.R-top-right{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+.top-account-name p{
+    font-size: 14px;
+    padding: 10px 0px;
+    margin: 0px 10px;
+    color: gray;
+}
+.R-top-right a{
+    padding: 10px;
+    color: black;
+    border-radius: 1px solid gray;
+}
+.top-account{
+    width: 40px;
+    height: 65%;
+    border-radius: 100%;
+    background-color: teal;
+}
+/*  */
+.R-buttom-side{
+    width: 100%;
+    height: 580px;
+    border-radius: 5px;
+    background-color: white;
+    overflow: hidden;
+    overflow-y: scroll;
+    box-shadow: rgba(0, 0, 0, 0.325) 0px 3px 4px 0px;
+}
+.R-scroll{
+    width: 100%;
+    /* height: 540px; */
+    margin-top: 40px;
+    background-color: yellow;
+}
+.R-scroll div{
+    color: black;
+    background-color: white;
+}
+/*  */
+.Left-side{
+    position: fixed;
+    left: 0;
+    top: 7px;
+    width: 15%;
+    border-radius: 5px;
+    height: 99.8%;
+    margin-left: 15px;
+    background-color: white;
+}
+.left-top{
+    width: 100%;
+    height: 60px;
+    padding: 20px;
+}
+.left-top p{
+    text-align: center;
+    font-size: 14px;
+    color: gray;
+}
+.left-link{
+    width: 100%;
+    display: inline-block;
+    font-size: 14px;
+    color: gray;
+}
+.left-link:hover{
+    background-color: rgba(220, 220, 220, 0.279);
+} 
+.left-link i{
+    padding: 3px;
+    margin: 10px;
+    color: rgb(94, 93, 93);
+    background-color: rgba(171, 167, 167, 0.442);
+}

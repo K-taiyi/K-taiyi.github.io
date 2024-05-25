@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    padding: 3px;
+    box-sizing: border-box;
+}
+.Head{
+    width: 100%;
+    height: 75px;
+    background-color: gray;
+}
+.Container{
+    width: 100%;
+    height: 750px;
+}
+.side-left{
+    width: 69%;
+    height: 100%;
+    float: left;
+    margin-right: 6px;
+    background-color: gray;
+}
+.side-right{
+    width: 30.5%;
+    height: 100%;
+    background-color: gray;
+    float: right;
+}
+.footer{
+    width: 100%;
+    height: 80px;
+    background-color: gray;
+}

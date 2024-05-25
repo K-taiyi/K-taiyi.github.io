@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.Head{
+    width: auto;
+    height: 100px;
+    margin: 5px;
+    background-color: gray;
+}
+.Container{
+    width: auto;
+    margin: 5px;
+    display: flex;
+}
+.Right-side{
+    width:70%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 100%;
+}
+.Box{
+    width: 235px;
+    background-color: gray;
+    height: 400px;
+    margin-bottom: 80px;
+}
+.Left-side{
+    width: 30%;
+    height: 900px;
+    padding-right: 5px;
+}
+.top{
+    width: 100%;
+    height: 30%;
+    background-color: gray;
+}
+.mid{
+    width: 100%;
+    height: 20%;
+    margin: 5px 0px;
+    background-color: gray;
+}
+.bottom{
+    width: 100%;
+    height: 10%;
+    background-color: gray;
+}
+.con-foot{
+    width: 70%;
+    height: 80px;
+    float: right;
+    margin: 5px;
+    background-color: gray;
+}

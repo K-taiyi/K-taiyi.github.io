@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+.Head{
+    width: 99.3%;
+    height: 60px;
+    margin: 5px;
+    background-color: gray;
+}
+.top-box{
+    width: 100%;
+    height: 110px;
+    display: flex;
+    padding: 0px 5px;
+}
+.top-left{
+    width: 28%;
+    height: 100%;
+    background-color: gray;
+}
+.top-mid{
+    width: 44%;
+    height: 100%;
+    margin: 0px 5px;
+    background-color: gray;
+}
+.top-right{
+    width: 28%;
+    height: 100%;
+    background-color: gray;
+}
+.under-box{
+    width: 100%;
+    height: 110px;
+    padding:  5px 5px 0px 5px;
+    display: flex;
+}
+.under-left{
+    width: 50%;
+    height: 100%;
+    background-color: gray;
+}
+.under-mid{
+    width: 20%;
+    height: 100%;
+    margin: 0px 5px;
+    background-color: gray;
+}
+.under-right{
+    width: 30%;
+    height: 100%;
+    background-color: gray;
+}
+.big-box{
+    width: 100%;
+    height: 180px;
+    display: flex;
+    padding: 5px;
+}
+.big{
+    width: calc(100%/3);
+    height: 100%;
+    background-color: gray;
+}
+.box{
+    width: 100%;
+    height: 110px;
+    padding:  0px 5px;
+    display: flex;
+}
+.bo-left{
+    width: 50%;
+    height: 100%;
+    background-color: gray;
+}
+.bo-mid{
+    width: 30%;
+    height: 100%;
+    margin: 0px 5px;
+    background-color: gray;
+}
+.bo-right{
+    width: 20%;
+    height: 100%;
+    background-color: gray;
+}
+.foot{
+    width: 99.3%;
+    height: 60px;
+    margin: 5px;
+    background-color: gray;
+}

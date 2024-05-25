@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.Head{
+    width: auto;
+    margin: 5px;
+    height: 100px;
+    background-color: gray;
+}
+.Container{
+    width: auto;
+    margin: 5px;
+    height: 700px;
+}
+.big-box{
+    width: 100%;
+    height: 400px;
+    background-color: gray;
+}
+.foot{
+    width: auto;
+    margin: 5px;
+    height: 80px;
+    background-color: gray;
+}
+.mid-box{
+    width: 100%;
+    height: 200px;
+    padding: 5px 0px;
+    display: flex;
+}
+.bottom-box{
+    width: auto;
+    height: 100px;
+    display: flex;
+}
+.left{
+    width: 70%;
+    height: 100%;
+    background-color: gray;
+}
+.right{
+    width: 30%;
+    margin-left: 5px;
+    height: 100%;
+    background-color: gray;
+}
+.Box{
+    width: calc(100%/4);
+    height: 100%;
+    background-color: gray;
+}
