@@ -1,0 +1,467 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body{
+    background-color: whitesmoke;
+}
+.Header{
+    width: 100%;
+    height: 90px;
+    display: flex;
+    padding:  0 20px;
+    margin-bottom: 5px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: gainsboro;
+}
+.Head-left{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.Head-left img{
+    height: 80%;
+}
+.Head-left h1{
+    margin-left: 10px;
+    font-size: 28px;
+}
+.Drop-menu{
+    display: flex;
+    gap: 2rem;
+}
+.menu-link{
+    font-size: 18px;
+    color: black;
+}
+.Head-right{
+    display: flex;
+    align-items: center;
+}
+.head-search-btn input{
+    border-radius: 50px;
+    border: 0.5px solid gray;
+    height: 30px;
+    padding: 10px;
+}
+.head-search-btn{
+    display: flex;
+}
+.btn{
+    margin: 0 2rem 0 1rem;
+    padding: 5px 10px;
+    border: 1px solid gray;
+    border-radius: 50px;
+}
+.head-drop-icon{
+    display: flex;
+    gap: 5px;
+}
+.head-drop-link{
+    padding: 5px;
+    color: rgb(56, 56, 56);
+    transition: 1s;
+    font-size: 18px;
+}
+.head-drop-link:hover{
+    border-radius: 5px;
+    transition: 1s;
+    color: whitesmoke;
+    background-color: gray;
+}
+/*  */
+/*  */
+.Swiper{
+    width: 98.5%;
+    height: 300px;
+    display: flex;
+}
+.Swiper img{
+    height: 60px;
+    margin-top: 40px;
+}
+.Swip{
+    width: 98%;
+    height: 100%;
+    display: flex;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgb(180, 203, 244);
+}
+.Swip-left{
+    width: 40%;
+    height: 100%;
+    padding: 25px;
+    line-height: 30px;
+}
+.Swip-left span{
+    font-size: 32px;
+    color: yellow;
+}
+.Swip-right{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.Swip-box{
+    width: 31.5%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    /* background-color: steelblue; */
+}
+.Swip-box img{
+    height: 100%;
+    margin: 0;
+    border-radius: 10px;
+}
+.Swip-box-child{
+    width: 100%;
+    height: 47%;
+    border-radius: 10px;
+    background-color: aliceblue;
+}
+.Swip-box-child img{
+    width: 100%;
+    margin: 0;
+}
+/*  */
+/*  */
+.Container{
+    width: 100%;
+    height: 100vh;
+    margin: 20px 0;
+    display: flex;
+}
+.Con-left{
+    width: 30%;
+    height: 100%;
+}
+.left-top{
+    width: 76%;
+    height: 50%;
+    margin: auto;
+    /* background-color: violet; */
+}
+.item-list{
+    border: 0.8px solid black;
+}
+.item-link{
+    display: flex;
+    height: 100%;
+    color: rgb(72, 68, 68);
+    padding: 8px;
+    justify-content: space-between;
+}
+.Drop-item h3{
+    border: 0.5px solid black;
+    padding: 10px;
+}
+.item-list:hover{
+    background-color: gainsboro;
+}
+.left-bottom{
+    width: 95%;
+    height: 50%;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    border-radius: 2px;
+    align-items: center;
+    border: 0.7px solid black;
+    background-color:whitesmoke;
+}
+.left-bottom h3{
+    margin: 0 10px;
+}
+.bottom-box{
+    width: 96%;
+    height: 20%;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5px;
+    background-color: gainsboro;
+}
+.pic-box{
+    width: 20%;
+    height: 100%;
+    background-color: rgb(74, 98, 26);
+    border-radius: 5px;
+}
+.pic-box img{
+    width: 100%;
+    height: 100%;
+}
+.text-box{
+    width: 80%;
+    height: 100%;
+    padding-left: 5px;
+}
+.text-box p{
+    font-size: 7px;
+    line-height: 10px;
+}
+.text-box b{
+    font-size: 14px;
+}
+
+.Con-right{
+    width: 70%;
+    height: 100%;
+    position: relative;
+    /* background-color: teal; */
+}
+.Con-top{
+    width: 98%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.input-search{
+    width: 770px;
+    padding: 0 20px;
+    border-radius: 10px;
+    border: 1px solid black;
+    height: 40px;
+}
+.Con-top button{
+    font-size: 16px;
+    border-radius: 5px;
+    color: gray;
+    background-color: blue;
+    border: 0.5px solid gray;
+    padding: 5px 15px;
+}
+.Con-h3{
+    position: absolute;
+    z-index: 0;
+    left: -25px;
+}
+.Con-minibox{
+    width: 85%;
+    margin: 28px 0 10px 0;
+    height: 100px;
+}
+.Drop-minibox{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.mini-list{
+    width: 11%;
+    height: 100%;
+    border-radius: 5px;
+    background-color: gainsboro;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.mini-link{
+    display: flex;
+    color: rgb(82, 80, 80);
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 16px;
+    align-items: center;
+}
+.mini-link i{
+    font-size: 20px;
+}
+.Con-product{
+    width: 95%;
+    height: 510px;
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 5px;
+    justify-content:space-between;
+    /* background-color: blueviolet; */
+}
+.box-main-product{
+    width: 23.5%;
+    height: 48%;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    align-items: center;
+    padding: 3px 6px;
+    background-color: white;
+}
+.pro-pic{
+    width: 100%;
+    height: 49%;
+    border-radius: 5px;
+    background-color:rgb(199, 197, 197);
+}
+.pro-pic img{
+    height: 100%;
+}
+.pro-text{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* background-color: yellow; */
+}
+.pro-text p{
+    font-size: 9px;
+    color: gray;
+}
+.text-btn{
+    display: flex;
+    width: 95%;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-between;
+}
+.detail-btn{
+    width: 80%;
+    height: 25px;
+    border-radius: 7px;
+    background-color: gainsboro;
+    border: 1px solid black;
+}
+.detail-btn p:hover{
+    color:crimson;
+}
+.detail-btn p{
+    font-size: 12px;
+    padding: 5px;
+    color: black;
+    border-radius: 5px;
+    text-align: center;
+}
+.text-btn-btn{
+    padding: 5px;
+    background-color: rgb(72, 70, 70);
+    color: white;
+    border-radius: 5px;
+}
+/*  */
+/*  */
+.Box{
+    width: 80%;
+    height: 250px;
+    margin: auto;
+    display: flex;
+    border-radius: 10px;
+    justify-content:space-between;
+    background-color:#3C4479;
+}
+.Big-Box-left{
+    width: 40%;
+    height: 100%;
+}
+.Box-left{
+    width: 30%;
+    height: 100%;
+}
+.Box-left img{
+    height: 100%;
+    border-radius: 10px;
+}
+.Big-Box-right{
+    width: 45%;
+    height: 100%;
+    display: flex;
+}
+.Box-mid{
+    width: 70%;
+    height: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.start-btn-a{
+    display: flex;
+    width: 150px;
+    height: 40px;
+    align-items: center;
+    border: 1px solid black;
+    background:linear-gradient(to right,purple,pink);
+    border-radius: 10px;
+    color: white;
+    justify-content: space-evenly;
+}
+.Box-right{
+    width: 40%;
+    height: 100%;  
+}
+.Box-right img{
+    height: 100%;
+    border-radius: 0 10px 10px 0;
+}
+/*  */
+/*  */
+.Footer{
+    width: 100%;
+    margin: 10px 0;
+    height: 250px;
+    padding-top: 30px;
+    color: white;
+    background-color: rgb(53, 52, 52);
+}
+.foot-box{
+    width: 97%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    /* justify-content: space-around; */
+    border-top: 0.5px solid gray;
+    background-color: rgb(53, 52, 52);
+}
+.Footer-box-left{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 10px;
+    justify-content: space-evenly;
+}
+.foot-left{
+    width: 20%;
+    height: 30%;
+    line-height: 12px;
+    /* background-color: tomato; */
+}
+.foot-left span {
+    margin-left: 10px;
+}
+.Footer-box-left hr{
+    width: 100%;
+    margin: 3px 0;
+}
+.foot-mid{
+    width: 20%;
+    height: 30%;
+    /* background-color: thistle; */
+}
+.Footer-box-right{
+    width: 20%;
+    /* background-color: aqua; */
+    height: 100%;
+}
+.foot-right{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.foot-right img{
+    height: 50%;
+}
