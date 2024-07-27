@@ -1,0 +1,6 @@
+@Electric_scooter_HostAddress = http://localhost:5147
+
+GET {{Electric_scooter_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
