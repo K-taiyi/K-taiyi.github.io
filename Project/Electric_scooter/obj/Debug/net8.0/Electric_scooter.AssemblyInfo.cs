@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Electric_scooter")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+19978cfd2895519c515dce0950b3986e8e466d9d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7595bd1dfd365a9797d4119adb60c62ac9e14163")]
 [assembly: System.Reflection.AssemblyProductAttribute("Electric_scooter")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Electric_scooter")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

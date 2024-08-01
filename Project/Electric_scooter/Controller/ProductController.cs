@@ -19,15 +19,20 @@ public class ProductController : ControllerBase
         _configuration = configuration;
     }
 
-    [HttpGet("list")]
-    public async Task<IActionResult> GetProductForFe()
+    [HttpGet("list/{catId}")]
+    public async Task<IActionResult> GetProductForFe(int catId)
     {
         var products = new List<ElectricScooterEntity>();
         
         var strCon = _configuration.GetConnectionString("Default");
         SqlConnection conn = new SqlConnection(strCon);
         conn.Open();
-        var sql = "SELECT *FROM tbl_product ORDER BY id DESC";
+        var where = "";
+        if (catId != 0)
+        {
+            where = $" where cat_id = {catId}";
+        }
+        var sql = $"SELECT *FROM tbl_product  {where} ORDER BY id asc ";
         SqlCommand command = new SqlCommand(sql, conn);
         SqlDataReader reader = command.ExecuteReader();
         while (reader.Read())
@@ -94,36 +99,43 @@ public class ProductController : ControllerBase
     
     // Create
     [HttpPost("create")]
-    public string CreateProduct([FromBody] ElectricScooterEntity request)
+    public async Task<IActionResult> CreateProduct([FromForm] ElectricScooterEntity request , [FromForm ] IFormFile file)
     {
-        try
+        if (file == null || file.Length == 0)
         {
-            var connectionString = _configuration.GetConnectionString("Default");
-            SqlConnection connection = new SqlConnection(connectionString);
-            var sql = "INSERT INTO tbl_product(title,description,price,image,cat_id) VALUES(@title,@description,@price,@image,@cat_id)";
-            SqlCommand command = new SqlCommand(sql, connection);
-            command.Parameters.AddWithValue("@title",request.title);
-            command.Parameters.AddWithValue("@description",request.description );
-            command.Parameters.AddWithValue("@price",request.price );
-            command.Parameters.AddWithValue("@image",request.image );
-            command.Parameters.AddWithValue("@cat_id", request.cat_id);
-            connection.Open();
-            var rowsAffected= command.ExecuteNonQuery();
-            if (rowsAffected > 0)
-            {
-                return "Product create successful";
-            }
-            else
-            {
-                return "Error creating product";
-            }
+            return BadRequest("No file uploaded");
         }
-        catch (Exception ex)
+
+        var uploadFolderPath= "/Users/kormtaiyi/Documents/ADITI_Academy/Frond-end Development/K-taiyi.github.io/Project/src/assets/img";
+        var fileName = file.FileName;
+        var filePath = Path.Combine(uploadFolderPath,fileName);
+
+        var stream = new FileStream(filePath, FileMode.Create);
+        await file.CopyToAsync(stream); 
+        
+        var conStr = _configuration.GetConnectionString("Default");
+        string connectionString;
+        SqlConnection conn = new SqlConnection(conStr);
+        var sql = "INSERT INTO tbl_product(title,description,price,image,cat_id) VALUES(@title,@description,@price,@image,@cat_id)";
+        SqlCommand command = new SqlCommand(sql, conn);
+        command.Parameters.AddWithValue("@title",request.title);
+        command.Parameters.AddWithValue("@description",request.description );
+        command.Parameters.AddWithValue("@price",request.price ); 
+        command.Parameters.AddWithValue("@image",fileName );
+        command.Parameters.AddWithValue("@cat_id", request.cat_id);
+        conn.Open();
+        var rowsAffected= command.ExecuteNonQuery();
+        var msg = "";
+        if(rowsAffected >0 )
         {
-            return $"Error creating product {ex.Message}";
+            msg = "Product create successfully";
         }
-        return "Create"; 
+        return Ok(msg);
     }
+
+    public string CallerFilePathAttribute { get; set; }
+    //
+    
     
     // Delete
     [HttpDelete("delete")]
@@ -133,7 +145,7 @@ public class ProductController : ControllerBase
         {
             var connectionString = _configuration.GetConnectionString("Default");
             SqlConnection connection = new SqlConnection(connectionString);
-            var sql = "DELETE FROM tbl_furniture WHERE id=@id ";
+            var sql = "DELETE FROM tbl_product WHERE id=@id ";
             SqlCommand command = new SqlCommand(sql, connection);
             command.Parameters.AddWithValue("@id", request.id);
             connection.Open();

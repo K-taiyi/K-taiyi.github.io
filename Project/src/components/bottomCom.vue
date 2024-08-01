@@ -17,9 +17,9 @@
             </div>
             <div class="tmid-right">
                 <h3>Useful links</h3>
-                <RouterLink class="Routt" :to="{name:'shopPage'}">Shop All</RouterLink>
-                <RouterLink class="Routt" :to="{name:'scooterPage'}">Electric Scooters</RouterLink>
-                <RouterLink class="Routt" :to="{name:'accessoPage'}">Accessories</RouterLink>
+                <RouterLink class="Routt" :to="{name:'shopPage', params: {cat_id: 0}}">Shop All</RouterLink>
+                <RouterLink class="Routt" :to="{name:'scooterPage', params: {cat_id: 1}}">Electric Scooters</RouterLink>
+                <RouterLink class="Routt" :to="{name:'accessoPage', params: {cat_id: 2}}">Accessories</RouterLink>
                 <RouterLink class="Routt" :to="{name:'aboutPage'}">About</RouterLink>
                 <RouterLink class="Routt" :to="{name:'contactPage'}">Contact</RouterLink>
             </div>

@@ -2,9 +2,9 @@
     <div class="HeaderCom">
         <div class="hMenu">
             <ul class="Dropdown" type="none">
-                <li class="dropList"><RouterLink class="dropLink" :to="{name:'shopPage'}">Shop All</RouterLink></li>
-                <li class="dropList"><RouterLink class="dropLink" :to="{name:'scooterPage'}">Electric Scooters</RouterLink></li>
-                <li class="dropList"><RouterLink class="dropLink" :to="{name:'accessoPage'}">Accessories</RouterLink></li>
+                <li class="dropList"><RouterLink class="dropLink" :to="{name:'shopPage', params: {cat_id: 0}}">Shop All</RouterLink></li>
+                <li class="dropList"><RouterLink class="dropLink" :to="{name:'scooterPage', params: {cat_id: 1}}">Electric Scooters</RouterLink></li>
+                <li class="dropList"><RouterLink class="dropLink" :to="{name:'accessoPage', params: {cat_id: 2}}">Accessories</RouterLink></li>
                 <li class="dropList"><RouterLink class="dropLink" :to="{name:'aboutPage'}">About</RouterLink></li>
                 <li class="dropList"><RouterLink class="dropLink" :to="{name:'contactPage'}">Contact</RouterLink></li>
             </ul>

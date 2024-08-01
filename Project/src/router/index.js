@@ -12,7 +12,6 @@ import SignUpView from "../views/signUpView.vue";
 import addNew from "@/views/admin/addNew.vue";
 import adminLogin from "../views/admin/adminLogin.vue";
 import uploadfile from "@/views/admin/uploadfile.vue";
-
 const routes = [
   {
     path: "",
@@ -25,12 +24,12 @@ const routes = [
     component: aboutView,
   },
   {
-    path: "/shop",
+    path: "/shop/:cat_id",
     name: "shopPage",
     component: shopView,
   },
   {
-    path: "/accessories",
+    path: "/accessories/:cat_id",
     name: "accessoPage",
     component: accessoView,
   },
@@ -50,7 +49,7 @@ const routes = [
     component: signInView,
   },
   {
-    path: "/scooter",
+    path: "/scooter/:cat_id",
     name: "scooterPage",
     component: electView,
   },
@@ -67,19 +66,19 @@ const routes = [
   {
     path: "/newProduct",
     name: "AddNewProduct",
-    component: addNew
+    component: addNew,
   },
   {
     path: "/upload",
     name: "uploadFile",
-    component: uploadfile
+    component: uploadfile,
   },
 ];
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
-  // routes: [...routes, adminRouter.options.routes], 
-  routes : routes.concat(adminRouter.options.routes) // \^ the same meaning 
+  // routes: [...routes, adminRouter.options.routes],
+  routes: routes.concat(adminRouter.options.routes), // \^ the same meaning
 });
 
 export default router;

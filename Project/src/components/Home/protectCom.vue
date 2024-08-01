@@ -3,7 +3,7 @@
         <div class="protectBox">
             <div class="protectBox-text">
                 <h1>Shop Electric <br> Scooter Accessories</h1>
-                <RouterLink class="pRout" :to="{name:'accessoPage'} ">SHOP ACCESSORIES</RouterLink>
+                <RouterLink class="pRout" :to="{name:'accessoPage', params: {cat_id: 2}} ">SHOP ACCESSORIES</RouterLink>
             </div>
             <div class="protectBox-pic">
                 <img src="../../assets/img/accessories-01.png" alt="">

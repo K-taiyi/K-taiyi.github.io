@@ -9,13 +9,12 @@
         <br/><br/>
         <input class="newInput" type="text" placeholder="Price" v-model="price" required/>
         <br/><br/>
-        <input class="newInput" type="text" placeholder="Category_id"  v-model="cat_id" required/>
+        <input class="newInput" type="text" placeholder="Category_id" v-model="cat_id" required/>
         <br/><br/>
-        <input type="file"
-         @change="onchangeSelectFile">
+        <input type="file" @change="onchangeSelectFile"/>
       </form>
       <div class="btn_save">
-        <RouterLink class="save_rout" :to="{ name:'adminPage'}">Cancel</RouterLink>
+        <RouterLink class="save_rout" :to="{ name: 'adminPage' }">Cancel</RouterLink>
         <button @click="addUser">Save</button>
         {{ errorMessage }}
       </div>
@@ -23,47 +22,47 @@
   </div>
 </template>
 <style scoped>
-    .conAddnewProduct {
-    width: 100%;
-    place-content: center;
-    display: grid;
-    height: 100vh;
-    background-color: aliceblue;
-    }
-    .AddNewProduct {
-    width: 400px;
-    height: 450px;
-    border: 1px solid gray;
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 20px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    }
-    .newInput {
-    width: 100%;
-    height: 40px;
-    padding: 10px;
-    }
-    .btn_save {
-    width: 100%;
-    display: flex;
-    align-items: end;
-    justify-content: end;
-    }
-    .btn_save button{
-        padding: 5px;
-        margin-left: 10px;
-    }
-    .save_rout {
-    border: 1px solid black;
-    padding: 5px;
-    color: black;
-    }
-    .save_rout:hover {
-    background-color: gainsboro;
-    }
+.conAddnewProduct {
+  width: 100%;
+  place-content: center;
+  display: grid;
+  height: 100vh;
+  background-color: aliceblue;
+}
+.AddNewProduct {
+  width: 400px;
+  height: 450px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.newInput {
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+}
+.btn_save {
+  width: 100%;
+  display: flex;
+  align-items: end;
+  justify-content: end;
+}
+.btn_save button {
+  padding: 5px;
+  margin-left: 10px;
+}
+.save_rout {
+  border: 1px solid black;
+  padding: 5px;
+  color: black;
+}
+.save_rout:hover {
+  background-color: gainsboro;
+}
 </style>
 <script>
 import axios from "axios";
@@ -76,19 +75,25 @@ export default {
       description: "",
       image: "",
       cat_id: "",
+      Selectedfile: null,
     };
   },
   methods: {
+    onchangeSelectFile(event) {
+      this.Selectedfile = event.target.files[0];
+    },
     addUser() {
-      var req = {
-        title: this.title,
-        price: this.price,
-        description: this.description,
-        cat_id : this.cat_id,
-        image : "",
+      var formData = new FormData();
+      formData.append("file", this.Selectedfile);
+      formData.append("title", this.title);
+      formData.append("price", this.price);
+      formData.append("description", this.description);
+      formData.append("image", "");
+      var header = {
+        "Content-Type: ": "multipart/form-data",
       };
       axios
-        .post("http://localhost:5147/products/create", req)
+        .post("http://localhost:5147/products/create", formData, header)
         .then((res) => {
           if (res.status == 200) {
             this.errorMessage = "Success create user.";
@@ -107,27 +112,28 @@ export default {
           this.errorMessage = "Error create user";
         });
     },
-    onchangeSelectFile(event){
-          this.Selectedfile = event.target.files[0];
-      },
-      uploadFileHandler(){
-          if(this.Selectedfile == null){
-              this.message= "Please selete File";
-              return 
-          }
-          var formData = new FormData();
-          formData.append("file",this.Selectedfile)
-          var header = {
-              'Content-Type: ': 'multipart/form-data'
-          }
-          axios.post("http://localhost:5147/products/upload",
-          formData,header).then((res) => {
-              this.message= 'Successfully uploaded -'
-          })
-          .catch((error)=>{
-              this.message = "can not upload file" + error
-          })
+    onchangeSelectFile(event) {
+      this.Selectedfile = event.target.files[0];
+    },
+    uploadFileHandler() {
+      if (this.Selectedfile == null) {
+        this.message = "Please selete File";
+        return;
       }
+      var formData = new FormData();
+      formData.append("file", this.Selectedfile);
+      var header = {
+        "Content-Type: ": "multipart/form-data",
+      };
+      axios
+        .post("http://localhost:5147/products/upload", formData, header)
+        .then((res) => {
+          this.message = "Successfully uploaded -";
+        })
+        .catch((error) => {
+          this.message = "can not upload file" + error;
+        });
+    },
   },
 };
 </script>

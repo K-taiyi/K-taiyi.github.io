@@ -7,6 +7,6 @@ public class ElectricScooterEntity
     public string description { get; set; }
     public string price { get; set; }
     public int cat_id { get; set; }
-    public string image { get; set; }
+    public string? image { get; set; }
     
 }
